@@ -1,4 +1,2 @@
 Flask
-sqlite3
-smtplib
-random
+Flask-SQLAlchemy
