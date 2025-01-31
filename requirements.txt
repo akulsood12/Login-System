@@ -1,2 +1,5 @@
 Flask
+Flask-Mail
+Flask-WTF
 Flask-SQLAlchemy
+gunicorn
