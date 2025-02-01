@@ -2,7 +2,7 @@ from flask import Flask, render_template, request, redirect, url_for, session
 from flask_sqlalchemy import SQLAlchemy
 from werkzeug.security import generate_password_hash, check_password_hash
 
-app = Flask(_name_)
+app = Flask(__name__)
 app.secret_key = "your_secret_key"
 
 # Database Configuration
@@ -66,6 +66,6 @@ def logout():
     session.pop('username', None)
     return redirect(url_for('login'))
 
-if _name_ == "_main_":
+if __name__ == "__main__":
     db.create_all()  # Create database tables
     app.run(debug=True)
